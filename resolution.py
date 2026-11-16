@@ -234,5 +234,6 @@ def prove(text):
     return False
 
 
-if __name__ == "__main__":
-    prove("(p /\\ ~q) -> r, (q /\\ ~r) -> r |- p -> r")
+input_line = input("Множина диз’юнктів: ")
+prove(input_line)
+

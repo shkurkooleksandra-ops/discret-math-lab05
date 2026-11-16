@@ -223,16 +223,6 @@ def unify(first_text, second_text, variables=VARIABLES):
     return substitution
 
 
-if __name__ == "__main__":
-    try:
-        if len(sys.argv) == 3:
-            first_text, second_text = sys.argv[1:]
-        elif len(sys.argv) == 1:
-            first_text = input("Перший предикат: ")
-            second_text = input("Другий предикат: ")
-        else:
-            raise ValueError(f"Передайте два предикати.\nПриклад:\n{EXAMPLE}")
-        unify(first_text, second_text)
-    except (ValueError, EOFError) as error:
-        print(error, file=sys.stderr)
-        sys.exit(1)
+first_text = input("Перший предикат: ")
+second_text = input("Другий предикат: ")
+unify(first_text, second_text)
